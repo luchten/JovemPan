@@ -1,0 +1,138 @@
+.main-menu {
+    background-color: black;
+}
+
+.menu-links {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;    
+    height: 50px;    
+}
+
+.menu-links a {
+    color: white;
+    padding: 10px 0;
+    display: block;
+}
+
+.news-logo {
+    width: 100px;    
+}
+
+.news-li:hover .grade {
+    display: block;    
+}
+
+.news-li:hover .politica {
+    display: block;
+}
+
+.news-li:hover .brasil {
+    display: block;
+}
+
+.news-li:hover .economia {
+    display: flex;
+}
+
+.news-li:hover a::after {
+    display: block;
+}
+
+.grade, .politica, .brasil {
+    background-color: white;
+    position: absolute;
+    left: -30px;
+    display: none;    
+    box-shadow: 1px 1px 5px gray;
+    width: 220px;    
+    padding: 15px 0; 
+    text-align: left;
+    z-index: 1;
+}
+
+.economia {
+    background-color: white;
+    position: absolute;
+    display: none;
+    box-shadow: 1px 1px 5px gray;
+    width: 550px;    
+    padding: 15px 0;
+    justify-content: space-evenly;
+    left: -150px;
+    z-index: 1;
+}
+
+.grade a, .politica a, .brasil a, .economia a {
+    color: gray;
+    padding: 5px 20px;
+}
+
+.news-li {
+    position: relative;
+}
+
+.news-li a::after {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    content: '';
+    height: 5px;
+    width: 100%;
+    background-color: darkred;
+}
+
+.news-li a.no-after::after {
+    display: none;
+}
+
+.appnews {
+    display: flex;    
+    color: white;
+    align-items: center;        
+    margin: 10px 0;
+}
+
+.carousel {
+    overflow: hidden;
+    display: flex;
+    align-items: center;    
+    margin-left: 10px;
+}
+
+.scroll-1 {
+    white-space: nowrap;
+    animation: animate1 30s linear infinite;
+    animation-delay: -30s;
+}
+
+.scroll-2 {
+    white-space: nowrap;
+    animation: animate2 30s linear infinite;
+    animation-delay: -15s;
+}
+
+.scroll-1 h4, .scroll-2 h4 {
+    font-size: 13px;
+    font-weight: bold;
+    margin: 0;
+}
+
+@keyframes animate1 {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes animate2 {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-200%);
+    }
+}
