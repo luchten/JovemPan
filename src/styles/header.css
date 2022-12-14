@@ -82,3 +82,21 @@
     border: none;
     margin-left: 10px;
 }
+
+@media (max-width: 1200px) {
+    .info {
+        margin-right: 100px;
+    }
+}
+
+@media (max-width: 940px) {
+    .info {
+        margin-right: 0px;
+    }
+}
+
+@media (max-width: 835px) {
+    .header {
+        display: none;
+    }
+}

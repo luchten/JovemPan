@@ -1,0 +1,24 @@
+.header-mobile {
+    display: none;
+    padding: 0;
+    background-color: black;    
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.header-mobile img {
+    width: 50px;    
+}
+
+.header-button {
+    color: white;
+    font-size: 30px;
+    margin: 0 10px;    
+}
+
+@media (max-width: 835px) {
+    .header-mobile {
+        display: flex;
+    }
+}

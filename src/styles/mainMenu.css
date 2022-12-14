@@ -16,7 +16,7 @@
 }
 
 .news-logo {
-    width: 100px;    
+    width: 100px;        
 }
 
 .news-li:hover .grade {
@@ -134,5 +134,17 @@
     }
     100% {
         transform: translateX(-200%);
+    }
+}
+
+@media (max-width: 1200px) {
+    .news-li a {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 835px) {
+    .menu-links {
+        display: none;
     }
 }

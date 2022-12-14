@@ -1,7 +1,12 @@
-*, a, ul, li, img, p, h6 {
+*, a, ul, li, img, p, h6, body {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+}
+
+button {
+    background-color: transparent;
+    border: none;
 }
 
 li {
