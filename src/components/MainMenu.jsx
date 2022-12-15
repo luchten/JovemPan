@@ -70,7 +70,7 @@ export default function MainMenu() {
                 <button className="header-button" onClick={showMenu}><i class="bi bi-list"></i></button>
                 <button className="header-button"><i class="bi bi-envelope-fill"></i></button>
               </div>
-              <a href="#"><img src="/images/logo1.png" alt="" /></a>
+              <a href="#"><img src="images/logo1.png" alt="" /></a>
               <ul className="cidade-div">
                 <li id="mude-cidade-mobile">
                   <button className="header-button"><i class="bi bi-geo-alt-fill"></i></button>
@@ -192,7 +192,7 @@ export default function MainMenu() {
                 </div>
                 <div className="menu-links-mobile">
                   <div className="title-mobile">
-                    <a href="#"><img className="news-logo" src="/images/news-logo-preto.png" alt="" /></a>
+                    <a href="#"><img className="news-logo" src="images/news-logo-preto.png" alt="" /></a>
                   </div>
                   <a href="#">Grade de Programação</a>
                   <div className="title-mobile">
