@@ -6,7 +6,7 @@
 .close-mobile {
     position: fixed;
     top: 15px;
-    right: 10px;    
+    left: 95%;
     color:darkred;
     font-size: 25px;    
 }

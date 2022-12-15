@@ -71,15 +71,47 @@ export default function MainMenu() {
                 <button className="header-button"><i class="bi bi-envelope-fill"></i></button>
               </div>
               <a href="#"><img src="/images/logo1.png" alt="" /></a>
-              <div className="cidade">
-                <button className="header-button"><i class="bi bi-geo-alt-fill"></i></button>
-                <button className="header-button"><i class="bi bi-headphones"></i></button>
-              </div>
+              <ul className="cidade-div">
+                <li id="mude-cidade-mobile">
+                  <button className="header-button"><i class="bi bi-geo-alt-fill"></i></button>
+                  <ul className="mude-cidade-div">
+                    <li><a href="#">Floripa-SC</a></li>
+                    <li><a href="#">Floripa-SC</a></li>
+                    <li><a href="#">Floripa-SC</a></li>
+                    <li><a href="#">Floripa-SC</a></li>
+                    <li><a href="#">Floripa-SC</a></li>
+                    <li><a href="#">Floripa-SC</a></li>
+                    <li><a href="#">Floripa-SC</a></li>
+                    <li><a href="#">Floripa-SC</a></li>
+                    <li><a href="#">Floripa-SC</a></li>
+                    <li><a href="#">Floripa-SC</a></li>
+                    <li><a href="#">Floripa-SC</a></li>
+                    <li><a href="#">Floripa-SC</a></li>
+                    <li><a href="#">Floripa-SC</a></li>
+                    <li><a href="#">Floripa-SC</a></li>
+                    <li><a href="#">Floripa-SC</a></li>
+                    <li><a href="#">Floripa-SC</a></li>
+                    <li><a href="#">Floripa-SC</a></li>
+                    <li><a href="#">Floripa-SC</a></li>
+                    <li><a href="#">Floripa-SC</a></li>
+                    <li><a href="#">Floripa-SC</a></li>
+                  </ul>
+                </li>
+                <li id="ouca-mobile">
+                  <button className="header-button"><i class="bi bi-headphones"></i></button>
+                  <ul className="ouca-div">
+                    <li><a href="#">JP FM</a></li>
+                    <li><a href="#">JP FM</a></li>
+                    <li><a href="#">JP FM</a></li>
+                    <li><a href="#">JP FM</a></li>
+                    <li><a href="#">JP FM</a></li>
+                  </ul>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
       </div>
-      
       <div className="main-menu">
         <div className="container-lg">
           <div className="row">
@@ -218,6 +250,21 @@ export default function MainMenu() {
               </div>
             </div>
           </div>
+        </div>
+        <div className="banner">
+          <div className="container-lg">
+            <div className="row">
+              <div className="col">
+                <div className="banner-div">
+                  <i class="bi bi-camera-reels-fill"></i>
+                  <h5>ASSISTA AO VIVO</h5>
+                  <a href="#">Morning Show</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="container-lg">
           <div className="row">
             <div className="col">
               <div className="appnews">
