@@ -1,19 +1,8 @@
 import React from "react";
-import { useState } from "react";
-import "../styles/header.css";
-import "../styles/headerMobile.css";
 
-export default function Header(props) {       
-    const [menuState, setMenuState] = useState();
-
-    const showMenu = () => {
-        setMenuState('show');        
-    }   
-    
-    props.func(menuState);
-    
+export default function Header() {
     return (
-        <div className="container-lg px-0 gx-0">                                    
+        <div className="container-lg px-0 gx-0">
             <div className="row">
                 <div className="col">
                     <div className="header">
@@ -59,17 +48,6 @@ export default function Header(props) {
                         <div className="search">
                             <input type="search" name="" id="" />
                             <button className="search-button"><i className="bi bi-search"></i></button>
-                        </div>
-                    </div>
-                    <div className="header-mobile">
-                        <div className="menu">
-                            <button className="header-button" onClick={showMenu}><i class="bi bi-list"></i></button>
-                            <button className="header-button"><i class="bi bi-envelope-fill"></i></button>
-                        </div>
-                        <a href="#"><img src="/images/logo1.png" alt="" /></a>
-                        <div className="cidade">
-                            <button className="header-button"><i class="bi bi-geo-alt-fill"></i></button>
-                            <button className="header-button"><i class="bi bi-headphones"></i></button>
                         </div>
                     </div>
                 </div>

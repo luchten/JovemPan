@@ -1,0 +1,11 @@
+.stf {
+    color: gray;    
+}
+
+.stf h6 {
+    color: darkred;
+}
+
+.stf:hover {
+    color: black;
+}

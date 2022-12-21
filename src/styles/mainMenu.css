@@ -1,11 +1,19 @@
 .main-menu {
-    background-color: black;    
+    background-color: black;
+    z-index: 1;
+    position: sticky;
+    top: 0;        
+}
+
+.banner {
+    background-color: black;
 }
 
 .menu-links {
+    background-color: black;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;    
+    justify-content: space-evenly;
     height: 50px;    
 }
 
@@ -16,11 +24,11 @@
 }
 
 .news-logo {
-    width: 100px;        
+    width: 100px;
 }
 
 .news-li:hover .grade {
-    display: block;    
+    display: block;
 }
 
 .news-li:hover .politica {
@@ -39,14 +47,16 @@
     display: block;
 }
 
-.grade, .politica, .brasil {
+.grade,
+.politica,
+.brasil {
     background-color: white;
     position: absolute;
     left: -30px;
-    display: none;    
+    display: none;
     box-shadow: 1px 1px 5px gray;
-    width: 220px;    
-    padding: 15px 0; 
+    width: 220px;
+    padding: 15px 0;
     text-align: left;
     z-index: 1;
 }
@@ -56,14 +66,17 @@
     position: absolute;
     display: none;
     box-shadow: 1px 1px 5px gray;
-    width: 550px;    
+    width: 550px;
     padding: 15px 0;
     justify-content: space-evenly;
     left: -150px;
     z-index: 1;
 }
 
-.grade a, .politica a, .brasil a, .economia a {
+.grade a,
+.politica a,
+.brasil a,
+.economia a {
     color: gray;
     padding: 5px 20px;
 }
@@ -88,32 +101,33 @@
 }
 
 .appnews {
-    display: flex;    
+    display: flex;
     color: white;
-    align-items: center;        
+    align-items: center;
     margin: 10px 0;
 }
 
-.carousel {
+.my-carousel {
     overflow: hidden;
     display: flex;
-    align-items: center;    
+    align-items: center;
     margin-left: 10px;
 }
 
 .scroll-1 {
     white-space: nowrap;
-    animation: animate1 30s linear infinite;
-    animation-delay: -30s;
+    animation: animate1 60s linear infinite;
+    animation-delay: -60s;
 }
 
 .scroll-2 {
     white-space: nowrap;
-    animation: animate2 30s linear infinite;
-    animation-delay: -15s;
+    animation: animate2 60s linear infinite;
+    animation-delay: -30s;
 }
 
-.scroll-1 h4, .scroll-2 h4 {
+.scroll-1 h4,
+.scroll-2 h4 {
     font-size: 13px;
     font-weight: bold;
     margin: 0;
@@ -123,6 +137,7 @@
     0% {
         transform: translateX(100%);
     }
+
     100% {
         transform: translateX(-100%);
     }
@@ -132,6 +147,7 @@
     0% {
         transform: translateX(0);
     }
+
     100% {
         transform: translateX(-200%);
     }

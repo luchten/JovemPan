@@ -1,21 +1,81 @@
-import * as React from "react"
+import React from "react"
 import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import Layout from "../components/Layout";
+import '../styles/home.css';
 import "../styles/global.css";
+import { Link } from "gatsby";
+import Card from "../components/Card";
+import Card1 from '../components/Card1';
+import noticias from '../script/news.js';
+import noticias1 from '../script/news1.js';
+
+
+const createNews = (news) => {
+  return (
+    <div className="col-md-6 col-12">
+      <Card src={news.src} title={news.title} text={news.text}></Card>
+    </div>
+  );
+}
+
+const createNews1 = (news) => {
+  return (
+    <div className="col-md-3 col-12">
+      <Card1 title={news.title} text={news.text}></Card1>
+    </div>
+  );
+}
 
 export default function Home() {
   return (
     <Layout>
-      <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio eligendi voluptates, repellat, reprehenderit soluta deserunt fugit excepturi quisquam numquam, animi magni culpa nesciunt velit iste corporis dolor debitis modi qui.
-      Sit quo porro sint laborum mollitia molestiae repellendus quod expedita, blanditiis velit magni nam adipisci, numquam autem optio impedit reprehenderit aut magnam perferendis veniam. Fuga, minima. Natus earum eos corporis.
-      Voluptates sequi, placeat explicabo, labore, quia quae aspernatur voluptatum esse veniam nulla corrupti ex voluptate accusamus odit incidunt necessitatibus nobis minus natus magnam. Quos, nulla quo ipsam quia nemo ad!
-      Doloremque adipisci minus dolor sequi ipsam debitis laborum accusantium. Velit asperiores sapiente fugit ipsum molestiae harum magni repellendus eligendi error facere adipisci, exercitationem rem fuga iusto vitae deleniti perspiciatis est.
-      Quod laudantium, inventore illo nobis debitis iusto suscipit in repudiandae aspernatur, a totam eligendi quibusdam? Molestiae voluptatibus maxime enim! Corrupti minus minima enim quibusdam beatae, animi sapiente eaque sit dignissimos?
-      Autem porro est laborum dicta officiis accusamus at, commodi cupiditate. Harum itaque tempora quisquam nisi quia earum natus hic sit minima voluptatibus, atque, consectetur nihil cum inventore commodi recusandae veniam.
-      Id perferendis et quibusdam. Suscipit mollitia magni temporibus aut velit nobis vitae inventore? Ipsa vero temporibus sunt dolores dolorem, nisi vitae, amet recusandae nesciunt illum tempore earum dolore minima quasi?
-      Culpa aliquid quidem vel. Odit sint officiis dignissimos porro voluptatem eveniet ipsam! Beatae, quos quasi est deleniti aspernatur accusantium nam, consequuntur delectus vitae impedit quidem explicabo, repudiandae illum eveniet ab?
-      Deleniti ad alias blanditiis, voluptate dolor illo reprehenderit praesentium laboriosam cum explicabo aut repudiandae? Assumenda distinctio temporibus ratione! Doloribus at necessitatibus et omnis vel ad, inventore autem excepturi doloremque esse?
-      Aperiam blanditiis dolor tempora tempore praesentium iure. Vel deserunt minus molestiae nulla optio dignissimos, quam esse modi perspiciatis earum laudantium unde quas distinctio doloremque facilis praesentium molestias provident fuga delectus!</h1>
+      <div className="container-lg">
+        <div className="row mt-4">
+          <div className="col-8">
+            <Link to="/" className="stf">
+              <h6>STF</h6>
+              <h1>Gilmar Mendes suspende porte de armas de Zambelli e dá 48 horas para deputada entregar pistola</h1>
+              <p>Ministro atendeu pedido da PGR motivado por episódio envolvendo a parlamentar e um homem nas ruas de SP; defesa afirma que argumento da Procuradoria não condiz com depoimento da parlamentar</p>
+            </Link>
+            <div className="row g-3 mt-4">
+              {noticias.map(createNews)}
+            </div>
+            <div className="row g-3 mt-4">
+              {noticias1.map(createNews1)}
+            </div>
+            <div className="row mt-5">
+              <div className="col-md-6 col-12">
+                <div className="free-card1">
+                  <img className="img-fluid" src="images/dinheiro.png" alt="" />
+                  <div>
+                    <h6>Esportes</h6>
+                    <h5>Jogador da Argentina arremessa dinheiro para torcida durante festa do título mundial; assista</h5>
+                    <p>Jogador da Argentina arremessa dinheiro para torcida durante festa do título mundial; assista</p>
+                  </div>
+                </div>
+              </div>
+              <div className="col-md-6 col-12">
+                <div className="free-card2">
+                  <h6>Entretenimento</h6>
+                  <h5>Morre o ator Pedro Paulo Rangel aos 74 anos no Rio de Janeiro</h5>
+                  <p>Famosos lamentam a morte de Pedro Paulo Rangel: ‘Um dos maiores de todos os tempos’</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="col-4 text-center">
+            <Link to="/">
+              <img src="images/video.png" alt="" />
+            </Link>
+            <div className="row">
+              <div className="col">
+                <h3>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel repudiandae laboriosam earum assumenda molestiae quia quam minima, recusandae delectus provident molestias! Quam, fugit natus dicta cumque laboriosam perferendis cum alias.</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </Layout>
   )
 }

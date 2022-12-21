@@ -1,0 +1,56 @@
+.my-card {
+    display: flex;     
+}
+
+.img-div {
+    width: 100px;
+    overflow: hidden;
+    margin-right: 10px;
+    min-width: 100px;
+}
+
+.img-div img {
+    transition: 0.25s;
+}
+
+.img-div img:hover {
+    scale: 1.1;
+}
+
+.my-card h6, .card1 h6 {
+    color: darkred;
+    font-size: 13px;
+    margin-bottom: 5px;
+}
+
+.my-card h5, .card1 h5 {
+    font-size: 15px;
+    color: rgb(100, 100, 100);
+}
+
+.my-card h5 {
+    color: rgb(75,75,75);
+    font-weight: bold;
+}
+
+.my-card:hover h5 {
+    color: black;
+}
+
+.card1:hover h5 {
+    color: black;
+}
+
+.free-card1 {
+    position: relative;
+    color: white;       
+}
+
+.free-card1 img {
+    position: absolute;
+    z-index: -1;
+}
+
+.free-card1 div {
+    padding: 20px;
+}
