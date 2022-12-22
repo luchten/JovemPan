@@ -43,23 +43,30 @@ export default function Home() {
             <div className="row g-3 mt-4">
               {noticias1.map(createNews1)}
             </div>
-            <div className="row mt-5">
+            <div className="row g-3 mt-5">
               <div className="col-md-6 col-12">
-                <div className="free-card1">
-                  <img className="img-fluid" src="images/dinheiro.png" alt="" />
-                  <div>
-                    <h6>Esportes</h6>
-                    <h5>Jogador da Argentina arremessa dinheiro para torcida durante festa do título mundial; assista</h5>
-                    <p>Jogador da Argentina arremessa dinheiro para torcida durante festa do título mundial; assista</p>
+                <Link to="/">
+                  <div className="free-card1">
+                    <img src="images/dinheiro.png" alt="" />
+                    <div className="text-div1">
+                      <h6>Esportes</h6>
+                      <h5>Jogador da Argentina arremessa dinheiro para torcida durante festa do título mundial; assista</h5>
+                      <p>Jogador da Argentina arremessa dinheiro para torcida durante festa do título mundial; assista</p>
+                    </div>
                   </div>
-                </div>
+                </Link>
               </div>
               <div className="col-md-6 col-12">
-                <div className="free-card2">
-                  <h6>Entretenimento</h6>
-                  <h5>Morre o ator Pedro Paulo Rangel aos 74 anos no Rio de Janeiro</h5>
-                  <p>Famosos lamentam a morte de Pedro Paulo Rangel: ‘Um dos maiores de todos os tempos’</p>
-                </div>
+                <Link to="/">
+                  <div className="free-card1">
+                    <img src="images/morre.png" alt="" />
+                    <div className="text-div1">
+                      <h6>Entretenimento</h6>
+                      <h5>Morre o ator Pedro Paulo Rangel aos 74 anos no Rio de Janeiro</h5>
+                      <p>Famosos lamentam a morte de Pedro Paulo Rangel: ‘Um dos maiores de todos os tempos’</p>
+                    </div>
+                  </div>
+                </Link>                
               </div>
             </div>
           </div>
