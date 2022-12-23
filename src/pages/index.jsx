@@ -6,9 +6,12 @@ import "../styles/global.css";
 import { Link } from "gatsby";
 import Card from "../components/Card";
 import Card1 from '../components/Card1';
+import Card2 from "../components/Card2";
+import Slide from "../components/Slide";
 import noticias from '../script/news.js';
 import noticias1 from '../script/news1.js';
-
+import slides from '../script/slides.js';
+import { useState } from "react";
 
 const createNews = (news) => {
   return (
@@ -26,7 +29,35 @@ const createNews1 = (news) => {
   );
 }
 
+const createSlides = (slide) => {
+  return (
+    <Slide
+      src={slide.src}
+      title={slide.title}
+      link={slide.link}>
+    </Slide>
+  );
+}
+
 export default function Home() {
+  const [slideState, changeState] = useState();
+  const changeSlide = (slideNumber) => {
+    switch (slideNumber) {
+      case 1:
+        changeState();
+        break;
+      case 2:
+        changeState('slide2');
+      break;
+      case 3:
+        changeState('slide3');
+      break;
+      case 4:
+        changeState('slide4');
+      break;      
+    }
+  } 
+
   return (
     <Layout>
       <div className="container-lg">
@@ -45,39 +76,41 @@ export default function Home() {
             </div>
             <div className="row g-3 mt-5">
               <div className="col-md-6 col-12">
-                <Link to="/">
-                  <div className="free-card1">
-                    <img src="images/dinheiro.png" alt="" />
-                    <div className="text-div1">
-                      <h6>Esportes</h6>
-                      <h5>Jogador da Argentina arremessa dinheiro para torcida durante festa do título mundial; assista</h5>
-                      <p>Jogador da Argentina arremessa dinheiro para torcida durante festa do título mundial; assista</p>
-                    </div>
-                  </div>
-                </Link>
+                <Card2
+                  src='images/dinheiro.png'
+                  title='Esportes'
+                  link='Jogador da Argentina arremessa dinheiro para torcida durante festa do título mundial; assista'
+                  text='Jogador da Argentina arremessa dinheiro para torcida durante festa do título mundial; assista'>
+                </Card2>
               </div>
               <div className="col-md-6 col-12">
-                <Link to="/">
-                  <div className="free-card1">
-                    <img src="images/morre.png" alt="" />
-                    <div className="text-div1">
-                      <h6>Entretenimento</h6>
-                      <h5>Morre o ator Pedro Paulo Rangel aos 74 anos no Rio de Janeiro</h5>
-                      <p>Famosos lamentam a morte de Pedro Paulo Rangel: ‘Um dos maiores de todos os tempos’</p>
-                    </div>
-                  </div>
-                </Link>                
+                <Card2
+                  src='images/morre.png'
+                  title='Entretenimento'
+                  link='Morre o ator Pedro Paulo Rangel aos 74 anos no Rio de Janeiro'
+                  text='Famosos lamentam a morte de Pedro Paulo Rangel: ‘Um dos maiores de todos os tempos’'>
+                </Card2>
               </div>
             </div>
           </div>
 
-          <div className="col-4 text-center">
+          <div className="col-4">
             <Link to="/">
               <img src="images/video.png" alt="" />
             </Link>
-            <div className="row">
+            <div className="row mt-4">
               <div className="col">
-                <h3>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel repudiandae laboriosam earum assumenda molestiae quia quam minima, recusandae delectus provident molestias! Quam, fugit natus dicta cumque laboriosam perferendis cum alias.</h3>
+                <div className="my-carousel">
+                  <div className={slideState == 'slide2' ? 'my-slider slide2' : slideState == 'slide3' ? 'my-slider slide3' : slideState == 'slide4' ? 'my-slider slide4' : 'my-slider'}>
+                    {slides.map(createSlides)}
+                  </div>
+                  <div className="slide-controls">
+                    <i class="bi bi-dot" onClick={() => changeSlide(1)}></i>
+                    <i class="bi bi-dot" onClick={() => changeSlide(2)}></i>
+                    <i class="bi bi-dot" onClick={() => changeSlide(3)}></i>
+                    <i class="bi bi-dot" onClick={() => changeSlide(4)}></i>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
