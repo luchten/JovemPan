@@ -11,7 +11,9 @@ import Slide from "../components/Slide";
 import noticias from '../script/news.js';
 import noticias1 from '../script/news1.js';
 import slides from '../script/slides.js';
+import { colunistas1, colunistas2 } from '../script/colunistas.js';
 import { useState } from "react";
+import SlideItem from "../components/SlideItem.jsx";
 
 const createNews = (news) => {
   return (
@@ -39,6 +41,16 @@ const createSlides = (slide) => {
   );
 }
 
+const createColunistas = (colunista) => {
+  return (
+    <SlideItem
+      src={colunista.src}
+      title={colunista.title}
+      text={colunista.text}>
+    </SlideItem>
+  );
+}
+
 export default function Home() {
   const [slideState, changeState] = useState();
   const changeSlide = (slideNumber) => {
@@ -48,20 +60,32 @@ export default function Home() {
         break;
       case 2:
         changeState('slide2');
-      break;
+        break;
       case 3:
         changeState('slide3');
-      break;
+        break;
       case 4:
         changeState('slide4');
-      break;      
+        break;
     }
-  } 
+  }
+
+  const [slideState1, changeState1] = useState();
+  const changeSlide1 = (slideNumber) => {
+    switch (slideNumber) {
+      case 1:
+        changeState1();
+        break;
+      case 2:
+        changeState1('slide2');
+        break;
+    }
+  }
 
   return (
     <Layout>
       <div className="container-lg">
-        <div className="row mt-4">
+        <div className="row my-4">
           <div className="col-8">
             <Link to="/" className="stf">
               <h6>STF</h6>
@@ -95,9 +119,13 @@ export default function Home() {
           </div>
 
           <div className="col-4">
-            <Link to="/">
-              <img src="images/video.png" alt="" />
-            </Link>
+            <div className="row">
+              <div className="col text-center">
+                <Link to="/">
+                  <img src="images/video.png" alt="" />
+                </Link>
+              </div>
+            </div>
             <div className="row mt-4">
               <div className="col">
                 <div className="my-carousel">
@@ -109,6 +137,31 @@ export default function Home() {
                     <i class="bi bi-dot" onClick={() => changeSlide(2)}></i>
                     <i class="bi bi-dot" onClick={() => changeSlide(3)}></i>
                     <i class="bi bi-dot" onClick={() => changeSlide(4)}></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="row mt-5">
+              <div className="col">
+                <div className="colunistas">
+                  <Link to="/"><h1>COLUNISTAS</h1></Link>
+                  <div className="my-carousel1">
+                    <div className={slideState1 == 'slide2' ? 'my-slider1 slide2' : 'my-slider1'}>
+                      <div className="my-slide1">
+                        {colunistas1.map(createColunistas)}
+                      </div>
+                      <div className="my-slide1">
+                        {colunistas2.map(createColunistas)}
+                      </div>
+                    </div>
+                  </div>
+                  <div className="colunistas-controls">
+                    <i class="bi bi-caret-left-fill" onClick={() => changeSlide1(1)}></i>
+                    <div>
+                      <i class="bi bi-0-circle-fill" onClick={() => changeSlide1(1)}></i>
+                      <i class="bi bi-1-circle-fill" onClick={() => changeSlide1(2)}></i>
+                    </div>
+                    <i class="bi bi-caret-right-fill" onClick={() => changeSlide1(2)}></i>
                   </div>
                 </div>
               </div>

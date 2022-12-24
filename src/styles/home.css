@@ -18,7 +18,7 @@
 
 .my-slider {    
     display: flex;
-    transition: 0.5s;
+    transition: 0.25s;
 }
 
 .next {
@@ -61,4 +61,58 @@
 
 .slide-controls i:hover {
     color: darkred;
+}
+
+.colunistas {
+    width: 400px;
+    overflow: hidden;
+    margin: auto;
+}
+
+.colunistas h1 {
+    color: darkred;
+    font-weight: bold;
+    font-size: 35px;
+    border-bottom: 2px solid darkred;
+    margin: 0;
+    padding-bottom: 5px;
+}
+
+.my-carousel1 {
+    background-color: rgb(235, 235, 235);
+}
+
+.colunistas-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(235, 235, 235);
+    padding: 10px;
+}
+
+.colunistas-controls .i:hover {
+    color: darkred;
+}
+
+.colunistas-controls i {
+    color: rgb(99, 99, 99);    
+    padding: 10px;
+    cursor: pointer;
+}
+
+.colunistas-controls i:hover {
+    color: darkred;
+}
+
+.my-slider1 {    
+    transition: 0.25s;
+    display: flex;    
+}
+
+.my-slide1 {
+    min-width: 400px;
+}
+
+.bi-caret-left-fill, .bi-caret-right-fill {
+    font-size: 25px;
 }
