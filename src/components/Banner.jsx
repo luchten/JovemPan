@@ -13,7 +13,7 @@ export default function Banner() {
             <div className="row">
               <div className="col">
                 <div className="banner-div">
-                  <i class="bi bi-camera-reels-fill"></i>
+                  <i className="bi bi-camera-reels-fill"></i>
                   <h5>ASSISTA AO VIVO</h5>
                   <a href="#">Morning Show</a>
                 </div>
@@ -26,7 +26,7 @@ export default function Banner() {
             <div className="col">
               <div className="appnews">
                 <h6>APPNEWS:</h6>
-                <div className="my-carousel">
+                <div className="my-carousel-app">
                   <div className="scroll-1">
                     <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum unde, laboriosam aspernatur, perferendis est totam vel praesentium et itaque illo provident iure quaerat numquam. Quam exercitationem pariatur eaque ea suscipit!</h4>
                   </div>

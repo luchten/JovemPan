@@ -107,11 +107,10 @@
     margin: 10px 0;
 }
 
-.my-carousel {
+.my-carousel-app {
     overflow: hidden;
-    display: flex;
-    align-items: center;
-    margin-left: 10px;
+    display: flex;    
+    margin-left: 10px;        
 }
 
 .scroll-1 {

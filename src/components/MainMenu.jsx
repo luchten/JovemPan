@@ -85,10 +85,10 @@ export default function () {
                             <li className="news-li"><a href="#">Especiais</a></li>
                         </ul>
                         <div className={menuState == 'show' ? 'menu-mobile menu-mobile-show' : 'menu-mobile'}>
-                            <button className="close-mobile" onClick={hideMenu}><i class="bi bi-x-lg"></i></button>
+                            <button className="close-mobile" onClick={hideMenu}><i className="bi bi-x-lg"></i></button>
                             <div className="search-mobile">
                                 <input className="input-search" type="search" name="" id="" />
-                                <button className="button-search"><i class="bi bi-search"></i></button>
+                                <button className="button-search"><i className="bi bi-search"></i></button>
                             </div>
                             <div className="menu-links-mobile">
                                 <div className="title-mobile">
@@ -150,13 +150,13 @@ export default function () {
                         </div>
                         <div className="header-mobile">
                             <div className="menu">
-                                <button className="header-button" onClick={showMenu}><i class="bi bi-list"></i></button>
-                                <button className="header-button"><i class="bi bi-envelope-fill"></i></button>
+                                <button className="header-button" onClick={showMenu}><i className="bi bi-list"></i></button>
+                                <button className="header-button"><i className="bi bi-envelope-fill"></i></button>
                             </div>
                             <a href="#"><img src="images/logo1.png" alt="" /></a>
                             <ul className="cidade-div">
                                 <li id="mude-cidade-mobile">
-                                    <button className="header-button"><i class="bi bi-geo-alt-fill"></i></button>
+                                    <button className="header-button"><i className="bi bi-geo-alt-fill"></i></button>
                                     <ul className="mude-cidade-div">
                                         <li><a href="#">Floripa-SC</a></li>
                                         <li><a href="#">Floripa-SC</a></li>
@@ -181,7 +181,7 @@ export default function () {
                                     </ul>
                                 </li>
                                 <li id="ouca-mobile">
-                                    <button className="header-button"><i class="bi bi-headphones"></i></button>
+                                    <button className="header-button"><i className="bi bi-headphones"></i></button>
                                     <ul className="ouca-div">
                                         <li><a href="#">JP FM</a></li>
                                         <li><a href="#">JP FM</a></li>

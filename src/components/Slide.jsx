@@ -1,5 +1,4 @@
 import React from "react";
-import '../styles/slide.css';
 import { Link } from "gatsby";
 
 export default function Slide(props) {
